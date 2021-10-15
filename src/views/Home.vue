@@ -1,6 +1,27 @@
 <template>
   <div class="container">
     <Navbar/>
+      <!-- ////////// formulario Añadir ////////// -->
+    <!-- Nombre -->
+  <div class="container my-4">
+  <form>  
+    <div class="input-group mb-3">
+    <span class="input-group-text">Nombre</span>
+    <input v-model="usuario.nombre" type="text" class="form-control">
+    </div>
+    <!-- Correo -->
+    <div class="input-group mb-3">
+    <span class="input-group-text">Correo</span>
+    <input v-model="usuario.correo" type="text" class="form-control">
+    </div>
+    <!-- Botone Guardar -->
+    <div class="mt-3">  
+    <button @click.prevent="agregarDato()" 
+            class="btn btn-primary">Guardar
+    </button>
+    </div>
+  </form>
+  </div>
 <!-- ////////// tabla ////////// -->
   <table class="table">
     <thead>
@@ -24,27 +45,6 @@
       </tr>
     </tbody>
   </table>
-  </div>
-  <!-- ////////// formulario Añadir ////////// -->
-    <!-- Nombre -->
-  <div class="container my-4">
-  <form>  
-    <div class="input-group mb-3">
-    <span class="input-group-text">Nombre</span>
-    <input v-model="usuario.nombre" type="text" class="form-control">
-    </div>
-    <!-- Correo -->
-    <div class="input-group mb-3">
-    <span class="input-group-text">Correo</span>
-    <input v-model="usuario.correo" type="text" class="form-control">
-    </div>
-    <!-- Botone Guardar -->
-    <div class="mt-3">  
-    <button @click.prevent="agregarDato()" 
-            class="btn btn-primary">Guardar
-    </button>
-    </div>
-  </form>
   </div>
 </template>
 
